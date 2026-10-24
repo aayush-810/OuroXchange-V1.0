@@ -133,3 +133,7 @@ async function forgot(e){if(!window.FB)return demoForgot(e);e.preventDefault();c
 function logout(){if(window.FB)FB.U.signOut(FB.auth);demoLogout()}
 async function delAcct(){if(!window.FB)return demoDelAcct();if(!confirm('Delete your account permanently? Your listings will be removed.'))return;try{await FB.U.deleteUser(FB.auth.currentUser);try{localStorage.removeItem('ox_'+me.uid)}catch{}items=items.filter(i=>i.o!==me.id);people=people.filter(p=>p!==me);me=null;chats={};cur=null;toast('Account deleted');go('home')}catch(x){toast(FBM(x.code),4000)}}
 render();
+
+window.onFirebaseReady = function () {
+  console.log("Firebase Authentication is ready!");
+};
