@@ -1,11 +1,55 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>OuroXchange – Learn, connect, exchange</title>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"></head><body>
-<header><div class="wrap"><nav id="nav"></nav></div></header>
-<main class="wrap" id="app"></main>
-<footer><div class="wrap"><span id="fl"></span><p>© OuroXchange.in – we connect people; exchanges happen directly between users.</p></div></footer>
-<script src="app.js"></script>
-<script type="module" src="firebase.js"></script></body></html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="OuroXchange - Find people to learn from, swap or donate items. Connect with your community.">
+    <title>OuroXchange - Learn, connect, exchange</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <nav id="nav"></nav>
+        </div>
+    </header>
+    <main class="wrap" id="app"></main>
+    <footer class="google-footer">
+        <div class="gf-location-bar">
+            <div class="wrap gf-bar-inner">
+                <div class="gf-location">
+                    <span class="gf-loc-dot"></span>
+                    <span id="gf-loc-text">India &bull; From your community &bull; Peer-to-Peer</span>
+                </div>
+                <div class="gf-tagline">
+                    <span>OuroXchange &ndash; Learn, connect, exchange</span>
+                </div>
+            </div>
+        </div>
+        <div class="gf-links-bar">
+            <div class="wrap gf-bar-inner">
+                <div class="gf-nav-left" id="fl-left">
+                    <a href="#" onclick="go('info','About');return false">About</a>
+                    <a href="#" onclick="nv('items');return false">Browse Items</a>
+                    <a href="#" onclick="nv('search');return false">Find People</a>
+                    <a href="#" onclick="go('contact');return false">Contact Us</a>
+                </div>
+                <div class="gf-nav-right" id="fl-right">
+                    <a href="#" onclick="go('privacy');return false">Privacy</a>
+                    <a href="#" onclick="go('info','Terms &amp; Conditions');return false">Terms</a>
+                    <a href="#" onclick="go('info','Permitted Items Policy');return false">Permitted Items</a>
+                    <a href="#" onclick="go('contact');return false">Help &amp; Safety</a>
+                </div>
+            </div>
+        </div>
+        <div class="gf-disclaimer-bar">
+            <div class="wrap gf-bar-inner">
+                <p id="gf-copyright">&copy; 2026 OuroXchange.in &ndash; We connect people; all exchanges happen directly between users.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+    <script type="module" src="firebase.js"></script>
+</body>
+</html>
